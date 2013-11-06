@@ -1,0 +1,77 @@
+{
+    "variables": {
+        "lang": "zh-cn"
+    },
+
+    "css": {
+        "filters": "html",
+        "snippets": {
+            "c": "/* |${child} */",
+            "co": "color:#${1:000};",
+            "c:rgb": "color:rgb(${1:0}, ${2:0}, ${3:0});",
+            "c:rgba": "color:rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
+            "rgba": "rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
+            "cc": "/**\n * $1\n * @file:     $2\n * @author:   $3\n * @update:   $4\n * @note:     $5\n * @doc:      $6\n*/\n|",
+            "c1": "/* ==========================================================================\n   ${1:1级区块标题}\n   ========================================================================== */\n|",
+            "c2": "/* --------------------------------------------------------------------------\n   ${1:2级区块标题}\n   -------------------------------------------------------------------------- */\n|",
+            "fsm": "-webkit-font-smoothing: antialiased;\n-moz-osx-font-smoothing: grayscale; /* Firefox 25+ */",
+            "fsm:s": "-webkit-font-smoothing: subpixel-antialiased; /* 默认值 */",
+            "fsm:a": "-webkit-font-smoothing: auto;\n-moz-osx-font-smoothing: auto;",
+            "fsm:n": "-webkit-font-smoothing: none;",
+            "@ff": "@font-face {\n\tfont-family: '${1:FontName}'; /* IE9 */\n\tsrc: url('${2:FileName}.eot');\n\tsrc: url('${2:FileName}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n\t\t url('${2:FileName}.woff') format('woff'), /* Chrome,Firefox */\n\t\t url('${2:FileName}.ttf') format('truetype'), /* Chrome,Firefox,Opera,Safari,Android, iOS 4.2+ */\n\t\t url('${2:FileName}.svg#${1:FontName}') format('svg'); /* iOS 4.1- */\n}",
+            "placeholder": "/* Firefox 18- */\ninput:-moz-placeholder, textarea:-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* Firefox 19+ */\ninput::-moz-placeholder, textarea::-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* IE10+ */\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n\tcolor: ${1:darkGray};\n}\ninput::-webkit-input-placeholder, textarea::-webkit-input-placeholder {\n\tcolor: ${1:darkGray};\n}",
+            "placeholderfocus": "/* Firefox 18- */\ninput:focus:-moz-placeholder, textarea:focus:-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* Firefox 19+ */\ninput:focus::-moz-placeholder, textarea:focus::-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* IE10+ */\ninput:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {\n\tcolor: ${1:darkGray};\n}\ninput:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {\n\tcolor: ${1:darkGray};\n}",
+            "selection": "::-moz-selection{\n\tbackground: #${1:b3d4fc};\n\ttext-shadow: none;\n}\n::selection{\n\tbackground: #${1:b3d4fc};\n\ttext-shadow: none;\n}",
+            "clip": "clip: rect(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
+            "clip:inset": "clip: inset(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
+            "transparent": "transparent",
+            "bg+": "background:${1:#fff} url(${2}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed};",
+            "bg2": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:#fff};/* 背景色始终写到最后 */\n|",
+            "bg3": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:50%} ${16:50%} ${17:no-repeat},\n           url(${18:图片3}) ${19:50%} ${20:50%} ${21:no-repeat} ${22:#fff};/* 背景色始终写到最后 */\n|",
+            "bgr": "background-repeat: no-repeat;",
+            "bgr:sp": "background-repeat: space; /* 自动缩放直到适应且填充满整个容器 */",
+            "bgr:rd": "background-repeat: round; /* 以相同的间距平铺且填充满整个容器或某个方向 */",
+            "bga:l": "background-attachment: local;",
+            "bgp": "background-position: ${1:50%} ${2:50%};",
+            "bgo": "background-origin: padding-box;",
+            "bgcp": "background-clip: border-box;",
+            "bgcp:t": "background-clip: text; /* 仅WebKit支持 */",
+            "bgsz:ct": "background-size: contain; /* 等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内 */",
+            "bgsz:cv": "background-size: cover; /* 等比缩放到完全覆盖容器，背景图像有可能超出容器 */",
+            "bgi:s": "background-image: -webkit-image-set(\n                  url(${1}) 1x,\n                  url(${2}) 2x); /* Retina Safari 6+,Chrome 21+ */\n",
+            "bgi+": "@media only screen and (-o-min-device-pixel-ratio: 2/1), /* Opera */\n       only screen and (min--moz-device-pixel-ratio: 2), /* Firefox 16 之前 */\n       only screen and (-webkit-min-device-pixel-ratio: 2), /* WebKit */\n       only screen and (min-resolution: 192dpi), /* 不支持dppx的浏览器 */\n       only screen and (min-resolution: 2dppx) /* 标准 */\n{\n\t${1:.selector}{\n\t\tbackground-image:url(${2});/* Retina */\n\t\tbackground-size: ${3:图片宽度÷2}px ${4:图片高度÷2}px;\n\t}\n}\n",
+            ":after": ":after {\n\tcontent: '';\n\t|${child}\n}",
+            ":befroe": ":befroe {\n\tcontent: '';\n\t|${child}\n}",
+            "checked": ":checked {\n\t|${child}\n}",
+            "rsz": "resize:both;\noverflow:auto;",
+            "rsz:b": "resize:both;\noverflow:auto;",
+            "rsz:h": "resize:horizontal;\noverflow:auto;",
+            "rsz:v": "resize:vertical;\noverflow:auto;",
+            "k": "{\n\t|${child}\n}"
+        }
+    },
+
+    "html": {
+        "filters": "html",
+        "profile": "html",
+        "snippets": {
+            "c": "<!-- |${child} -->",
+            "cc": "<!-- ${1:模块名} begin -->\n\t|${child}\n<!-- ${1:模块名} end -->",
+            "style": "<style>\n\t|${child}\n</style>",
+            "sty": "<style>\n\t|${child}\n</style>",
+            "style+": "<style scoped>\n\t|${child}\n</style>",
+            "sty+": "<style scoped>\n\t|${child}\n</style>",
+            "script": "<script>\n\t|\n</script>",
+            "ab": "<a href=\"#\" traget=\"_blank\">|</a>|",
+            "aj": "<a href=\"javascript:;\">|</a>|"
+        },
+
+        "abbreviations": {
+            "mod": ".mod>.hd+.bd+.ft",
+            "dib": ".dib-wrap>dib*2",
+            "vimg": ".vertical-box>b.vertical-hack+.vertical-content>a.vertical-img>img",
+            "vbox": ".vertical-box>b.vertical-hack+.vertical-content>p{未知高度垂直居中模块}",
+            "vimg+": ".vertical-box>b.vertical-hack+.vertical-content>(.vertical-img>a>img)+p{未知高度垂直居中模块}"
+        }
+    }
+}
