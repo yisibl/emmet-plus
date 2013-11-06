@@ -15,7 +15,7 @@
 
 ## 扩展了哪些功能？
 
-* 统一的注释风格
+* 统一的注释风格，以[css-creating](https://github.com/yisibl/css-creating)为参考。
 
 例如输入`c`，`cc`
 
@@ -122,5 +122,5 @@ display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4
 
 所有输出代码都已经预定义光标路径，按`TAB`可以自动切换到下一个编辑点。
 
-
 赶快试试吧(*^__^*) ！
+
