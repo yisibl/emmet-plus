@@ -47,7 +47,9 @@
             "rsz:b": "resize:both;\noverflow:auto;",
             "rsz:h": "resize:horizontal;\noverflow:auto;",
             "rsz:v": "resize:vertical;\noverflow:auto;",
-            "k": "{\n\t|${child}\n}"
+            "k": "{\n\t|${child}\n}",
+            "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flex; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
+            "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;"
         }
     },
 

@@ -109,6 +109,17 @@
 -moz-osx-font-smoothing: grayscale; /* Firefox 25+ */
 ```
 
+* 扩展 emmet 不支持的属性，比如`flex`，输入`dfx`，会输出：
+
+```css
+display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */
+display: -moz-box; /* Firefox 17- */
+display: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */
+display: -moz-flex; /* Firefox 18+ */
+display: -ms-flex; /* IE 10 */
+display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
+```
+
 所有输出代码都已经预定义光标路径，按`TAB`可以自动切换到下一个编辑点。
 
 赶快试试吧(*^__^*) ！
