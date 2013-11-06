@@ -15,7 +15,7 @@
 
 ## 扩展了哪些功能？
 
-* 统一的注释风格
+* 统一的注释风格，以[css-creating](https://github.com/yisibl/css-creating)为参考。
 
 例如输入`c`，`cc`
 
