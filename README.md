@@ -1,10 +1,12 @@
-# emmet plus 让emmet更强大
+# Emmet plus 让 Emmet 更强大
+
+![Emmet plus animation demo](http://gtms01.alicdn.com/tps/i1/T1oIAwFXtgXXa1BMjv-707-735.gif)
 
 ## 如何使用？
 
 以 Sublime Text 为例
 
-1. 首先你得有个 emmet。
+1. 首先你得有个 Emmet。
 2. 打开 Sublime Text 的安装目录。
 3. 在 Data 文件夹下面新建一个名为 emmet 的目录。
 4. 拷贝`snippets-emmet-plus.json`到该目录下。
