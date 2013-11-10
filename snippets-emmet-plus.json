@@ -51,6 +51,12 @@
             "fsm:a": "-webkit-font-smoothing: auto;\n-moz-osx-font-smoothing: auto;",
             "fsm:n": "-webkit-font-smoothing: none;",
 
+            "fst": "font-style:${normal};",
+            "fst:n": "font-style:normal;",
+            "fst:i": "font-style:italic;",
+            "fst:o": "font-style:oblique;",
+            "fs": "font-size:${medium};",
+
             "@f": "@font-face {\n\tfont-family: |;\n\tsrc: local('|'), url(|);|\n}",
 
             "@kf": "@-webkit-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n@-moz-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}\n@-o-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}\n@keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}",
@@ -58,6 +64,7 @@
             "@ff": "@font-face {\n\tfont-family: '${1:FontName}';\n\tsrc: url('${2:FileName}.eot'); /* IE9+ */\n\tsrc: url('${2:FileName}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */\n\t\t url('${2:FileName}.woff') format('woff'), /* Chrome,Firefox */\n\t\t url('${2:FileName}.ttf') format('truetype'), /* Chrome,Firefox,Opera,Safari,Android, iOS 4.2+ */\n\t\t url('${2:FileName}.svg#${1:FontName}') format('svg'); /* iOS 4.1- */${3}\n}",
             "unicode-range": "unicode-range: U+0-10FFFF; /* 默认值 */",
             "src:l": "src:\n\tlocal('${1:font-name}'),\n\turl(${2:font-url});",
+
             "placeholder": "/* Firefox 18- */\ninput:-moz-placeholder, textarea:-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* Firefox 19+ */\ninput::-moz-placeholder, textarea::-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* IE10+ */\ninput:-ms-input-placeholder, textarea:-ms-input-placeholder {\n\tcolor: ${1:darkGray};\n}\ninput::-webkit-input-placeholder, textarea::-webkit-input-placeholder {\n\tcolor: ${1:darkGray};\n}",
             "placeholderfocus": "/* Firefox 18- */\ninput:focus:-moz-placeholder, textarea:focus:-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* Firefox 19+ */\ninput:focus::-moz-placeholder, textarea:focus::-moz-placeholder {\n\tcolor: ${1:darkGray};\n}\n/* IE10+ */\ninput:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder {\n\tcolor: ${1:darkGray};\n}\ninput:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder {\n\tcolor: ${1:darkGray};\n}",
             "selection": "::-moz-selection{\n\tbackground: #${1:b3d4fc};\n\ttext-shadow: none;\n}\n::selection{\n\tbackground: #${1:b3d4fc};\n\ttext-shadow: none;\n}",
