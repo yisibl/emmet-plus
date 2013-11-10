@@ -51,11 +51,20 @@
             "fsm:a": "-webkit-font-smoothing: auto;\n-moz-osx-font-smoothing: auto;",
             "fsm:n": "-webkit-font-smoothing: none;",
 
+            "f": "float:${none};",
+            "f:n": "float:${none};",
+            "f:l": "float:left;",
+            "fl": "float:left;",
+            "f:r": "float:right;",
+
+            "fo": "font:|;",
             "fst": "font-style:${normal};",
             "fst:n": "font-style:normal;",
             "fst:i": "font-style:italic;",
             "fst:o": "font-style:oblique;",
             "fs": "font-size:${medium};",
+            "fsa": "font-size-adjust:|;",
+            "fsa:n": "font-size-adjust:none;",
 
             "@f": "@font-face {\n\tfont-family: |;\n\tsrc: local('|'), url(|);|\n}",
 
