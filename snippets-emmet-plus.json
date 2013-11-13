@@ -126,9 +126,9 @@
         "abbreviations": {
             "mod": ".mod>.hd+.bd+.ft",
             "dib": ".dib-wrap>dib*2",
-            "vimg": ".vertical-box>b.vertical-hack+.vertical-content>a.vertical-img>img",
-            "vbox": ".vertical-box>b.vertical-hack+.vertical-content>p{未知高度垂直居中模块}",
-            "vimg+": ".vertical-box>b.vertical-hack+.vertical-content>(.vertical-img>a>img)+p{未知高度垂直居中模块}"
+            "vimg": ".center-box>b.center-hack+.center-body>a.center-img>img",
+            "vbox": ".center-box>b.center-hack+.center-content>p{未知高度垂直居中模块}",
+            "vimg+": ".center-box>b.center-hack+.center-content>(.center-img>a>img)+p{未知高度垂直居中模块}"
         }
     }
 }
