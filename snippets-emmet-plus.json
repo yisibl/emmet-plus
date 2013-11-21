@@ -1,12 +1,15 @@
 {
     "variables": {
-        "lang": "zh-cn"
+        "lang": "zh-cn",
+        "color": "#333",
+        "bg-color": "#ccc"
     },
 
     "css": {
         "filters": "html",
         "snippets": {
-            "co": "color:#${1:000};",
+            "co": "color:${color};",
+            "co:f": "color:#${fff};",
             "ccur":"color:currentColor;",
             
             "c:rgb": "color:rgb(${1:0}, ${2:0}, ${3:0});",
@@ -42,8 +45,8 @@
             
             "imgo": "image-orientation:;",
 
-            "c": "/* |${child} */",
-            "cc": "/**\n * $1\n * @file:     $2\n * @author:   $3\n * @update:   $4\n * @note:     $5\n * @doc:      $6\n*/\n|",
+            "c": "/* ${child}$1 */|",
+            "cm": "/**\n * $1\n * @file:     $2\n * @author:   $3\n * @update:   $4\n * @note:     $5\n * @doc:      $6\n*/\n|",
             "c1": "/* ==========================================================================\n   ${1:1级区块标题}\n   ========================================================================== */\n|",
             "c2": "/* --------------------------------------------------------------------------\n   ${1:2级区块标题}\n   -------------------------------------------------------------------------- */\n|",
             "fsm": "-webkit-font-smoothing: antialiased;\n-moz-osx-font-smoothing: grayscale; /* Firefox 25+ */",
@@ -66,6 +69,7 @@
             "fsa": "font-size-adjust:|;",
             "fsa:n": "font-size-adjust:none;",
 
+            "@c": "@charset \"utf-8\";",
             "@f": "@font-face {\n\tfont-family: |;\n\tsrc: local('|'), url(|);|\n}",
 
             "@kf": "@-webkit-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n@-moz-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}\n@-o-keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}\n@keyframes ${1:identifier} {\n\t${2:0%} {\n\t\t${3}\n\t}${6}\n\t${4:100%} {\n\t\t${5}\n\t}\n}\n}",
@@ -80,14 +84,16 @@
             "clip": "clip: rect(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
             "clip:inset": "clip: inset(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
             "transparent": "transparent",
-            "bg+": "background:${1:#fff} url(${2}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed};",
+            "bg": "background:url(${1}) ${2:0} ${3:0}${4: ${5:no-}repeat${6}};",
+            "bg+": "background:${1:#fff }url(${2}) ${3:50%} ${4:50%}${5: ${6:no-}repeat${7}};",
             "bg2": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:#fff};/* 背景色始终写到最后 */\n|",
             "bg3": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:50%} ${16:50%} ${17:no-repeat},\n           url(${18:图片3}) ${19:50%} ${20:50%} ${21:no-repeat} ${22:#fff};/* 背景色始终写到最后 */\n|",
             "bgr": "background-repeat: no-repeat;",
             "bgr:sp": "background-repeat: space; /* 自动缩放直到适应且填充满整个容器 */",
             "bgr:rd": "background-repeat: round; /* 以相同的间距平铺且填充满整个容器或某个方向 */",
             "bga:l": "background-attachment: local;",
-            "bgp": "background-position: ${1:50%} ${2:50%};",
+            "bgp": "background-position: ${1:x} ${2:y};",
+            "bgp+": "background-position: ${1:bottom 10px} ${2:right 10px};",
             "bgo": "background-origin: padding-box;",
             "bgcp": "background-clip: border-box;",
             "bgcp:t": "background-clip: text; /* 仅WebKit支持 */",
@@ -112,23 +118,30 @@
         "filters": "html",
         "profile": "html",
         "snippets": {
-            "c": "<!-- |${child} -->",
-            "cc": "<!-- ${1:模块名} begin -->\n\t|${child}\n<!-- ${1:模块名} end -->",
+            "cube": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:cube-min}.css",
+            "neat": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:neat-min}.css",
+            "type": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:type-min}.css",
+            "cl": "class=\"${child}$1\"|",
+            "id": "id=\"${child}$1\"|",
+            "tit": "title=\"${child}$1\"|",
+            "trb": "traget=\"_blank\"|",
+            "c": "<!-- $1${child} -->$2",
+            "cm": "<!-- ${1:模块名} begin -->\n\t|${child}\n<!-- ${1:模块名} end -->",
             "style": "<style>\n\t|${child}\n</style>",
-            "sty": "<style>\n\t|${child}\n</style>",
-            "style+": "<style scoped>\n\t|${child}\n</style>",
-            "sty+": "<style scoped>\n\t|${child}\n</style>",
-            "script": "<script>\n\t|\n</script>",
-            "ab": "<a href=\"#\" traget=\"_blank\">|</a>|",
-            "aj": "<a href=\"javascript:;\">|</a>|"
+            "st": "<style>\n\t|${child}\n</style>",
+            "styles": "<style scoped>\n\t|${child}\n</style>",
+            "sts": "<style scoped>\n\t|${child}\n</style>",
+            "script": "<script>\n\t|${child}\n</script>",
+            "aj": "<a href=\"javascript:;\">${child}|</a>"
         },
 
         "abbreviations": {
+            "ab": "a[href=\"#\" traget=\"_blank\"]",
             "mod": ".mod>.hd+.bd+.ft",
             "dib": ".dib-wrap>dib*2",
-            "vimg": ".vertical-box>b.vertical-hack+.vertical-content>a.vertical-img>img",
-            "vbox": ".vertical-box>b.vertical-hack+.vertical-content>p{未知高度垂直居中模块}",
-            "vimg+": ".vertical-box>b.vertical-hack+.vertical-content>(.vertical-img>a>img)+p{未知高度垂直居中模块}"
+            "vimg": ".center-box>b.center-hack+.center-body>a.center-img>img",
+            "vbox": ".center-box>b.center-hack+.center-content>p{未知高度垂直居中模块}",
+            "vimg+": ".center-box>b.center-hack+.center-content>(.center-img>a>img)+p{未知高度垂直居中模块}"
         }
     }
 }
