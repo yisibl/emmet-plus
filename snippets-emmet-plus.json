@@ -37,6 +37,8 @@
             "objf:s": "object-fit:scale-down;",
             "objf:n": "object-fit:none;",
 
+            "ovs:t": "-webkit-overflow-scrolling: touch;",
+            
             "imgr": "image-resolution:from-image;",
             "imgr:s": "image-resolution:snap;",
             "imgr:fs": "image-resolution:from-image snap;",
@@ -45,8 +47,8 @@
             
             "imgo": "image-orientation:;",
 
-            "c": "/* ${child}$1 */|",
-            "cm": "/**\n * $1\n * @file:     $2\n * @author:   $3\n * @update:   $4\n * @note:     $5\n * @doc:      $6\n*/\n|",
+            "c": "/* $1 */|",
+            "cm": "/**\n * $1\n${2:${4: * @file:     }\n${5: * @author:   }\n${6: * @update:   }\n${7: * @note:     }\n${8: * @doc:      }}\n */\n|",
             "c1": "/* ==========================================================================\n   ${1:1级区块标题}\n   ========================================================================== */\n|",
             "c2": "/* --------------------------------------------------------------------------\n   ${1:2级区块标题}\n   -------------------------------------------------------------------------- */\n|",
             "fsm": "-webkit-font-smoothing: antialiased;\n-moz-osx-font-smoothing: grayscale; /* Firefox 25+ */",
@@ -84,10 +86,14 @@
             "clip": "clip: rect(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
             "clip:inset": "clip: inset(${1:0px}, ${1:0px}, ${1:0px}, ${1:0px});",
             "transparent": "transparent",
+            "bdra": "border-radius:|;",
             "bg": "background:url(${1}) ${2:0} ${3:0}${4: ${5:no-}repeat${6}};",
             "bg+": "background:${1:#fff }url(${2}) ${3:50%} ${4:50%}${5: ${6:no-}repeat${7}};",
             "bg2": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:#fff};/* 背景色始终写到最后 */\n|",
             "bg3": "background: url(${2:图片1}) ${3:50%} ${4:50%} / ${5:(bg-size)}${6:100%}${7:,contain} ${8:no-repeat} ${9:(bg-origin)}${10:padding-box} ${11:(bg-clip)}${12:border-box} ${13:fixed},\n           url(${14:图片2}) ${15:50%} ${16:50%} ${17:no-repeat},\n           url(${18:图片3}) ${19:50%} ${20:50%} ${21:no-repeat} ${22:#fff};/* 背景色始终写到最后 */\n|",
+
+             "bg:ie": "_background: none;\n_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='${1:x.png}', sizingMethod='${2:crop}');",
+
             "bgr": "background-repeat: no-repeat;",
             "bgr:sp": "background-repeat: space; /* 自动缩放直到适应且填充满整个容器 */",
             "bgr:rd": "background-repeat: round; /* 以相同的间距平铺且填充满整个容器或某个方向 */",
@@ -110,7 +116,31 @@
             "rsz:v": "resize:vertical;\noverflow:auto;",
             "k": "{\n\t|${child}\n}",
             "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flex; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
-            "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;"
+            "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;",
+
+            "fx": "flex: ${1:0} ${2:1} ${3:auto}; /* 伸缩容器内的子元素如何分配空间 */",
+            "fxg": "flex-grow: ${1:0}; /* 伸缩项目的扩展比率 */",
+            "fxs": "flex-shrink: ${1:1};/* 伸缩项目的收缩比率 */",
+            "fxb": "flex-basis: ${1:auto}; /* 伸缩基准值 */",
+
+            "fx:f": "flex-flow:${1:column} ${2:wrap};",
+            "fx:d": "flex-direction:${1:row};",
+            "fx:w": "flex-wrap:${1:nowrap};",
+
+            "jc": "-webkit-box-pack: ${1:start};\n-moz-box-pack: ${1:start};\n-ms-flex-pack: ${1:start};\n-webkit-justify-content: ${2:flex-start};\njustify-content: ${2:flex-start};",
+            "jc:e": "-webkit-box-pack: ${1:end};\n-moz-box-pack: ${1:end};\n-ms-flex-pack: ${1:end};\n-webkit-justify-content: ${2:flex-end};\njustify-content: ${2:flex-end};",
+            "jc:c": "-webkit-box-pack: center;\n-moz-box-pack: center;\n-ms-flex-pack: center;\n-webkit-justify-content: center;\njustify-content: center;",
+
+            "jc:sb": "-webkit-box-pack: ${1:justify};\n-moz-box-pack: ${1:justify};\n-ms-flex-pack: ${1:justify};\n-webkit-justify-content: ${2:space-between};\njustify-content: ${2:space-between};",
+
+            "jc:sa": "-webkit-box-pack: ${1:justify};\n-moz-box-pack: ${1:justify};\n-ms-flex-pack: ${2:distribute};\n-webkit-justify-content: ${3:space-around};\njustify-content: ${3:space-around};",
+
+
+            "ac": "align-content:${1:stretch};",
+            "ai": "align-items:${1:stretch};",
+            "as": "align-self:${1:auto};",
+
+            "od": "order:${1:0};"
         }
     },
 
@@ -118,25 +148,25 @@
         "filters": "html",
         "profile": "html",
         "snippets": {
-            "cube": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:cube-min}.css",
-            "neat": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:neat-min}.css",
-            "type": "http://g.tbcdn.cn/thx/cube/${1:1.0.8}/${2:type-min}.css",
+            "cube": "http://g.tbcdn.cn/thx/cube/${child}${1:1.0.8}/${2:cube-min}.css",
+            "neat": "http://g.tbcdn.cn/thx/cube/${child}${1:1.0.8}/${2:neat-min}.css",
+            "type": "http://g.tbcdn.cn/thx/cube/${child}${1:1.0.8}/${2:type-min}.css",
             "cl": "class=\"${child}$1\"|",
             "id": "id=\"${child}$1\"|",
             "tit": "title=\"${child}$1\"|",
             "trb": "traget=\"_blank\"|",
-            "c": "<!-- $1${child} -->$2",
-            "cm": "<!-- ${1:模块名} begin -->\n\t|${child}\n<!-- ${1:模块名} end -->",
-            "style": "<style>\n\t|${child}\n</style>",
-            "st": "<style>\n\t|${child}\n</style>",
-            "styles": "<style scoped>\n\t|${child}\n</style>",
-            "sts": "<style scoped>\n\t|${child}\n</style>",
-            "script": "<script>\n\t|${child}\n</script>",
+            "c": "<!-- ${child}$1 -->$2",
+            "cm": "<!-- ${1:模块名} begin -->\n\t${child}|\n<!-- ${1:模块名} end -->",
+            "style": "<style>\n\t${child}|\n</style>",
+            "st": "<style>\n\t${child}|\n</style>",
+            "styles": "<style scoped>\n\t${child}|\n</style>",
+            "sts": "<style scoped>\n\t${child}|\n</style>",
+            "script": "<script>\n\t${child}|\n</script>",
+            "ab": "<a href=\"#\" traget=\"blank\">${child}|</a>",
             "aj": "<a href=\"javascript:;\">${child}|</a>"
         },
 
         "abbreviations": {
-            "ab": "a[href=\"#\" traget=\"_blank\"]",
             "mod": ".mod>.hd+.bd+.ft",
             "dib": ".dib-wrap>dib*2",
             "vimg": ".center-box>b.center-hack+.center-body>a.center-img>img",
