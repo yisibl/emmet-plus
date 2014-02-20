@@ -1,24 +1,16 @@
 {
     "variables": {
         "lang": "zh-cn",
-        "color": "#333",
+        "color": "#ccc",
         "bg-color": "#ccc"
     },
 
     "css": {
         "filters": "html",
         "snippets": {
-            "co": "color:${color};",
+            "co": "color:#${1:333};",
             "co:f": "color:#${fff};",
             "ccur":"color:currentColor;",
-            
-            "c:rgb": "color:rgb(${1:0}, ${2:0}, ${3:0});",
-            "c:rgba": "color:rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
-            "bg:rgb": "background:rgb(${1:0}, ${2:0}, ${3:0});",
-            "bg:rgba": "background:rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
-            "bgc:rgb": "background-color:rgb(${1:0}, ${2:0}, ${3:0});",
-            "bgc:rgba": "background-color:rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
-            "rgba": "rgba(${1:0}, ${2:0}, ${3:0}, .${4:5});",
 
             "c:hsl": "color:hsl(${1:0}, ${2:0%}, ${3:0%});",
             "c:hsla": "color:hsla(${1:0}, ${2:0%}, ${3:0%}, .${4:5});",
@@ -115,7 +107,7 @@
             "rsz:h": "resize:horizontal;\noverflow:auto;",
             "rsz:v": "resize:vertical;\noverflow:auto;",
             "k": "{\n\t|${child}\n}",
-            "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flex; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
+            "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flexbox; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
             "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;",
 
             "fx": "flex: ${1:0} ${2:1} ${3:auto}; /* 伸缩容器内的子元素如何分配空间 */",
@@ -124,8 +116,12 @@
             "fxb": "flex-basis: ${1:auto}; /* 伸缩基准值 */",
 
             "fx:f": "flex-flow:${1:column} ${2:wrap};",
-            "fx:d": "flex-direction:${1:row};",
             "fx:w": "flex-wrap:${1:nowrap};",
+
+            "fx:d": "-webkit-box-direction: ${1:normal};\n-moz-box-direction: ${1:normal};\n-webkit-box-orient: ${2:horizontal};\n-moz-box-orient: ${2:horizontal};\n-webkit-flex-direction: ${3:row};\n-ms-flex-direction: ${3:row};\nflex-direction: ${3:row};",
+            "fx:drr": "-webkit-box-direction: ${1:reverse};\n-moz-box-direction: ${1:reverse};\n-webkit-box-orient: ${2:horizontal};\n-moz-box-orient: ${2:horizontal};\n-webkit-flex-direction: ${3:row-reverse};\n-ms-flex-direction: ${3:row-reverse};\nflex-direction: ${3:row-reverse};",
+            "fx:dc": "-webkit-box-direction: ${1:normal};\n-moz-box-direction: ${1:normal};\n-webkit-box-orient: ${2:vertical};\n-moz-box-orient: ${2:vertical};\n-webkit-flex-direction: ${3:column};\n-ms-flex-direction: ${3:column};\nflex-direction: ${3:column};",
+            "fx:dcr": "-webkit-box-direction: ${1:reverse};\n-moz-box-direction: ${1:reverse};\n-webkit-box-orient: ${2:vertical};\n-moz-box-orient: ${2:vertical};\n-webkit-flex-direction: ${3:column-reverse};\n-ms-flex-direction: ${3:column-reverse};\nflex-direction: ${3:column-reverse};",
 
             "jc": "-webkit-box-pack: ${1:start};\n-moz-box-pack: ${1:start};\n-ms-flex-pack: ${1:start};\n-webkit-justify-content: ${2:flex-start};\njustify-content: ${2:flex-start};",
             "jc:e": "-webkit-box-pack: ${1:end};\n-moz-box-pack: ${1:end};\n-ms-flex-pack: ${1:end};\n-webkit-justify-content: ${2:flex-end};\njustify-content: ${2:flex-end};",
