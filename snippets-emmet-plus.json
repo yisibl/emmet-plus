@@ -110,13 +110,16 @@
             "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flexbox; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
             "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;",
 
-            "fx": "flex: ${1:0} ${2:1} ${3:auto}; /* 伸缩容器内的子元素如何分配空间 */",
+            "fx": "/* 伸缩容器内的子元素如何分配空间 */\n-webkit-box-flex: ${1:0};\n-moz-box-flex: ${1:0};\n-webkit-flex: ${1:0} ${2:1} ${3:auto};\n-ms-flex: ${1:0} ${2:1} ${3:auto};\nflex: ${1:0} ${2:1} ${3:auto};",
             "fxg": "flex-grow: ${1:0}; /* 伸缩项目的扩展比率 */",
             "fxs": "flex-shrink: ${1:1};/* 伸缩项目的收缩比率 */",
             "fxb": "flex-basis: ${1:auto}; /* 伸缩基准值 */",
 
-            "fx:f": "flex-flow:${1:column} ${2:wrap};",
-            "fx:w": "flex-wrap:${1:nowrap};",
+            "fx:f": "-webkit-flex-flow:${1:row} ${2:nowrap};\nflex-flow:${1:row} ${2:nowrap};",
+            
+            "fxw": "-webkit-flex-wrap: ${1:nowrap};\n-ms-flex-wrap: ${1:nowrap};\nflex-wrap: ${1:nowrap};",
+            "fxw:w": "-webkit-flex-wrap: ${1:wrap};\n-ms-flex-wrap: ${1:wrap};\nflex-wrap: ${1:wrap};",
+            "fxw:wr": "-webkit-flex-wrap: ${1:wrap-reverse};\n-ms-flex-wrap: ${1:wrap-reverse};\nflex-wrap: ${1:wrap-reverse};",
 
             "fx:d": "-webkit-box-direction: ${1:normal};\n-moz-box-direction: ${1:normal};\n-webkit-box-orient: ${2:horizontal};\n-moz-box-orient: ${2:horizontal};\n-webkit-flex-direction: ${3:row};\n-ms-flex-direction: ${3:row};\nflex-direction: ${3:row};",
             "fx:drr": "-webkit-box-direction: ${1:reverse};\n-moz-box-direction: ${1:reverse};\n-webkit-box-orient: ${2:horizontal};\n-moz-box-orient: ${2:horizontal};\n-webkit-flex-direction: ${3:row-reverse};\n-ms-flex-direction: ${3:row-reverse};\nflex-direction: ${3:row-reverse};",
@@ -132,11 +135,27 @@
             "jc:sa": "-webkit-box-pack: ${1:justify};\n-moz-box-pack: ${1:justify};\n-ms-flex-pack: ${2:distribute};\n-webkit-justify-content: ${3:space-around};\njustify-content: ${3:space-around};",
 
 
-            "ac": "align-content:${1:stretch};",
-            "ai": "align-items:${1:stretch};",
-            "as": "align-self:${1:auto};",
+            "ac": "-webkit-align-content: ${1:stretch};\n-ms-flex-line-pack: ${1:stretch};\nalign-content: ${1:stretch};",
+            "ac:fs": "-webkit-align-content: ${1:flex-start};\n-ms-flex-line-pack: ${2:start};\nalign-content: ${1:flex-start};",
+            "ac:fe": "-webkit-align-content: ${1:flex-end};\n-ms-flex-line-pack: ${2:end};\nalign-content: ${1:flex-end};",
+            "ac:c": "-webkit-align-content: ${1:center};\n-ms-flex-line-pack: ${1:center};\nalign-content: ${1:center};",
+            "ac:sb": "-webkit-align-content: ${1:space-between};\n-ms-flex-line-pack: ${2:justify};\nalign-content: ${1:space-between};",
+            "ac:sa": "-webkit-align-content: ${1:space-around};\n-ms-flex-line-pack: ${2:distribute};\nalign-content: ${1:space-around};",
 
-            "od": "order:${1:0};"
+            "ai": "-webkit-box-align: ${1:stretch};\n-moz-box-align: ${1:stretch};\n-ms-flex-align: ${1:stretch};\n-webkit-align-items: ${1:stretch};\nalign-items: ${1:stretch};",
+            "ai:fs": "-webkit-box-align: ${1:start};\n-moz-box-align: ${1:start};\n-ms-flex-align: ${1:start};\n-webkit-align-items: ${2:flex-start};\nalign-items: ${2:flex-start};",
+            "ai:fe": "-webkit-box-align: ${1:end};\n-moz-box-align: ${1:end};\n-ms-flex-align: ${1:end};\n-webkit-align-items: ${2:flex-end};\nalign-items: ${2:flex-end};",
+            "ai:c": "-webkit-box-align: ${1:center};\n-moz-box-align: ${1:center};\n-ms-flex-align: ${1:center};\n-webkit-align-items: ${1:center};\nalign-items: ${1:center};",
+            "ai:b": "-webkit-box-align: ${1:baseline};\n-moz-box-align: ${1:baseline};\n-ms-flex-align: ${1:baseline};\n-webkit-align-items: ${1:baseline};\nalign-items: ${1:baseline};",
+
+            "as": "-webkit-align-self: ${1:auto};\n-ms-flex-item-align: ${1:auto};\nalign-self: ${1:auto};",
+            "as:fs": "-webkit-align-self: ${1:flex-start};\n-ms-flex-item-align: ${2:start};\nalign-self: ${1:flex-start};",
+            "as:fe": "-webkit-align-self: ${1:flex-end};\n-ms-flex-item-align: ${2:end};\nalign-self: ${1:flex-end};",
+            "as:c": "-webkit-align-self: ${1:center};\n-ms-flex-item-align: ${1:center};\nalign-self: ${1:center};",
+            "as:b": "-webkit-align-self: ${1:baseline};\n-ms-flex-item-align: ${1:baseline};\nalign-self: ${1:baseline};",
+            "as:s": "-webkit-align-self: ${1:stretch};\n-ms-flex-item-align: ${1:stretch};\nalign-self: ${1:stretch};",
+
+            "od": "-webkit-box-ordinal-group: ${1:1};\n-moz-box-ordinal-group: ${1:1};\n-webkit-order: ${1:0};\n-ms-flex-order: ${1:0};\norder: ${1:0};"
         }
     },
 
