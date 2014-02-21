@@ -94,7 +94,7 @@
             "bgp+": "background-position: ${1:bottom 10px} ${2:right 10px};",
             "bgo": "background-origin: padding-box;",
             "bgcp": "background-clip: border-box;",
-            "bgcp:t": "background-clip: text; /* 仅WebKit支持 */",
+            "bgcp:t": "background-clip: text; /* 仅 WebKit 支持 */",
             "bgsz:ct": "background-size: contain; /* 等比缩放到宽度或高度与容器的宽度或高度相等，背景图像始终被包含在容器内 */",
             "bgsz:cv": "background-size: cover; /* 等比缩放到完全覆盖容器，背景图像有可能超出容器 */",
             "bgi:s": "background-image: -webkit-image-set(\n                  url(${1}) 1x,\n                  url(${2}) 2x); /* Retina Safari 6+,Chrome 21+ */\n",
@@ -107,17 +107,21 @@
             "rsz:h": "resize:horizontal;\noverflow:auto;",
             "rsz:v": "resize:vertical;\noverflow:auto;",
             "k": "{\n\t|${child}\n}",
+            
             "d:fx": "display: -webkit-box; /* Chrome 4+, Safari 3.1, iOS Safari 3.2+ */\ndisplay: -moz-box; /* Firefox 17- */\ndisplay: -webkit-flex; /* Chrome 21+, Safari 6.1+, iOS Safari 7+, Opera 15/16 */\ndisplay: -moz-flex; /* Firefox 18+ */\ndisplay: -ms-flexbox; /* IE 10 */\ndisplay: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */",
-            "d:ifx": "display: -webkit-box;\ndisplay: -moz-box;\ndisplay: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: inline-flex;",
+            "d:ifx": "display: -ms-inline-flexbox;\ndisplay: -webkit-inline-flex;\ndisplay: -moz-inline-flex; /* Firefox 18+ */\ndisplay: inline-flex;",
 
             "fx": "/* 伸缩容器内的子元素如何分配空间 */\n-webkit-box-flex: ${1:0};\n-moz-box-flex: ${1:0};\n-webkit-flex: ${1:0} ${2:1} ${3:auto};\n-ms-flex: ${1:0} ${2:1} ${3:auto};\nflex: ${1:0} ${2:1} ${3:auto};",
-            "fxg": "flex-grow: ${1:0}; /* 伸缩项目的扩展比率 */",
-            "fxs": "flex-shrink: ${1:1};/* 伸缩项目的收缩比率 */",
-            "fxb": "flex-basis: ${1:auto}; /* 伸缩基准值 */",
 
-            "fx:f": "-webkit-flex-flow:${1:row} ${2:nowrap};\nflex-flow:${1:row} ${2:nowrap};",
+            "fxg": "/* 伸缩项目的扩展比率 */\n-webkit-flex-grow: ${1:0}; /* Chrome 21+ */\n-moz-flex-grow: ${1:0}; /* Firefox 18-20 */\nflex-grow: ${1:0}; /* Chrome 29+, Opera 12.1 */",
+
+            "fxs": "/* 伸缩项目的收缩比率 */\n-webkit-flex-shrink: ${1:1}; /* Chrome 21+ */\n-moz-flex-shrink: ${1:1}; /* Firefox 18-20 */\nflex-shrink: ${1:1}; /* Chrome 29+, Opera 12.1 */",
+
+            "fxb": "/* 伸缩基准值 */\n-webkit-flex-basis: ${1:auto}; /* Chrome 21+ */\n-moz-flex-basis: ${1:auto}; /* Firefox 18-22 */\nflex-basis: ${1:auto}; /* Chrome 29+, Opera 12.1 */",
+
+            "fx:f": "-webkit-flex-flow:${1:row} ${2:nowrap};\nflex-flow:${1:row} ${2:nowrap}; /* Fiefox 28+ */",
             
-            "fxw": "-webkit-flex-wrap: ${1:nowrap};\n-ms-flex-wrap: ${1:nowrap};\nflex-wrap: ${1:nowrap};",
+            "fxw": "-webkit-flex-wrap: ${1:nowrap};\n-ms-flex-wrap: ${1:nowrap};\nflex-wrap: ${1:nowrap};/* Fiefox 28+ */",
             "fxw:w": "-webkit-flex-wrap: ${1:wrap};\n-ms-flex-wrap: ${1:wrap};\nflex-wrap: ${1:wrap};",
             "fxw:wr": "-webkit-flex-wrap: ${1:wrap-reverse};\n-ms-flex-wrap: ${1:wrap-reverse};\nflex-wrap: ${1:wrap-reverse};",
 
