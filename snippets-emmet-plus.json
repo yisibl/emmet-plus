@@ -29,7 +29,7 @@
             "objf:s": "object-fit:scale-down;",
             "objf:n": "object-fit:none;",
 
-            "ovs:t": "-webkit-overflow-scrolling: touch;",
+            "ovs": "-ms-overflow-style: -ms-autohiding-scrollbar;\n-webkit-overflow-scrolling: touch;",
             
             "imgr": "image-resolution:from-image;",
             "imgr:s": "image-resolution:snap;",
