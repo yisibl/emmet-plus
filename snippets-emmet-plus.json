@@ -119,7 +119,11 @@
 
             "fxb": "/* 伸缩基准值 */\n-webkit-flex-basis: ${1:auto}; /* Chrome 21+ */\n-moz-flex-basis: ${1:auto}; /* Firefox 18-22 */\nflex-basis: ${1:auto}; /* Chrome 29+, Opera 12.1 */",
 
-            "fx:f": "-webkit-flex-flow:${1:row} ${2:nowrap};\nflex-flow:${1:row} ${2:nowrap}; /* Fiefox 28+ */",
+            "fxf": "-webkit-flex-flow:${1:row} ${2:nowrap};\nflex-flow:${1:row} ${2:nowrap}; /* Fiefox 28+ */",
+            "fxf:rw": "-webkit-flex-flow:${1:row} ${2:wrap};\nflex-flow:${1:row} ${2:wrap};",
+            "fxf:cn": "-webkit-flex-flow:${1:column} ${2:nowrap};\nflex-flow:${1:column} ${2:nowrap};",
+            "fxf:cw": "-webkit-flex-flow:${1:column} ${2:wrap};\nflex-flow:${1:column} ${2:wrap};",
+            "fxf:cwr": "-webkit-flex-flow:${1:column} ${2:wrap-reverse};\nflex-flow:${1:column} ${2:wrap-reverse};",
             
             "fxw": "-webkit-flex-wrap: ${1:nowrap};\n-ms-flex-wrap: ${1:nowrap};\nflex-wrap: ${1:nowrap};/* Fiefox 28+ */",
             "fxw:w": "-webkit-flex-wrap: ${1:wrap};\n-ms-flex-wrap: ${1:wrap};\nflex-wrap: ${1:wrap};",
@@ -130,21 +134,21 @@
             "fx:dc": "-webkit-box-direction: ${1:normal};\n-moz-box-direction: ${1:normal};\n-webkit-box-orient: ${2:vertical};\n-moz-box-orient: ${2:vertical};\n-webkit-flex-direction: ${3:column};\n-ms-flex-direction: ${3:column};\nflex-direction: ${3:column};",
             "fx:dcr": "-webkit-box-direction: ${1:reverse};\n-moz-box-direction: ${1:reverse};\n-webkit-box-orient: ${2:vertical};\n-moz-box-orient: ${2:vertical};\n-webkit-flex-direction: ${3:column-reverse};\n-ms-flex-direction: ${3:column-reverse};\nflex-direction: ${3:column-reverse};",
 
-            "jc": "-webkit-box-pack: ${1:start};\n-moz-box-pack: ${1:start};\n-ms-flex-pack: ${1:start};\n-webkit-justify-content: ${2:flex-start};\njustify-content: ${2:flex-start};",
-            "jc:e": "-webkit-box-pack: ${1:end};\n-moz-box-pack: ${1:end};\n-ms-flex-pack: ${1:end};\n-webkit-justify-content: ${2:flex-end};\njustify-content: ${2:flex-end};",
+            "jc": "-webkit-box-pack: ${1:start};\n-moz-box-pack: ${1:start};\n-ms-flex-pack: ${1:start};\n-webkit-justify-content: flex-${2:start};\njustify-content: flex-${2:start};",
+            "jc:e": "-webkit-box-pack: ${1:end};\n-moz-box-pack: ${1:end};\n-ms-flex-pack: ${1:end};\n-webkit-justify-content: flex-${2:end};\njustify-content: flex-${2:end};",
             "jc:c": "-webkit-box-pack: center;\n-moz-box-pack: center;\n-ms-flex-pack: center;\n-webkit-justify-content: center;\njustify-content: center;",
 
             "jc:sb": "-webkit-box-pack: ${1:justify};\n-moz-box-pack: ${1:justify};\n-ms-flex-pack: ${1:justify};\n-webkit-justify-content: ${2:space-between};\njustify-content: ${2:space-between};",
 
-            "jc:sa": "-webkit-box-pack: ${1:justify};\n-moz-box-pack: ${1:justify};\n-ms-flex-pack: ${2:distribute};\n-webkit-justify-content: ${3:space-around};\njustify-content: ${3:space-around};",
+            "jc:sa": "/* 旧版 flex 不支持 */-ms-flex-pack: ${2:distribute};\n-webkit-justify-content: ${3:space-around};\njustify-content: ${3:space-around};",
 
 
-            "ac": "-webkit-align-content: ${1:stretch};\n-ms-flex-line-pack: ${1:stretch};\nalign-content: ${1:stretch};",
-            "ac:fs": "-webkit-align-content: ${1:flex-start};\n-ms-flex-line-pack: ${2:start};\nalign-content: ${1:flex-start};",
-            "ac:fe": "-webkit-align-content: ${1:flex-end};\n-ms-flex-line-pack: ${2:end};\nalign-content: ${1:flex-end};",
-            "ac:c": "-webkit-align-content: ${1:center};\n-ms-flex-line-pack: ${1:center};\nalign-content: ${1:center};",
-            "ac:sb": "-webkit-align-content: ${1:space-between};\n-ms-flex-line-pack: ${2:justify};\nalign-content: ${1:space-between};",
-            "ac:sa": "-webkit-align-content: ${1:space-around};\n-ms-flex-line-pack: ${2:distribute};\nalign-content: ${1:space-around};",
+            "ac": "-ms-flex-line-pack: ${1:stretch};\n-webkit-align-content: ${1:stretch};\nalign-content: ${1:stretch};",
+            "ac:fs": "-ms-flex-line-pack: ${2:start};\n-webkit-align-content: flex-${1:start};\nalign-content: flex-${1:start};",
+            "ac:fe": "-ms-flex-line-pack: ${2:end};\n-webkit-align-content: flex-${1:end};\nalign-content: flex-${1:end};",
+            "ac:c": "-ms-flex-line-pack: ${1:center};\n-webkit-align-content: ${1:center};\nalign-content: ${1:center};",
+            "ac:sb": "-ms-flex-line-pack: ${2:justify};-webkit-align-content: ${1:space-between};\n\nalign-content: ${1:space-between};",
+            "ac:sa": "-ms-flex-line-pack: ${2:distribute};-webkit-align-content: ${1:space-around};\n\nalign-content: ${1:space-around};",
 
             "ai": "-webkit-box-align: ${1:stretch};\n-moz-box-align: ${1:stretch};\n-ms-flex-align: ${1:stretch};\n-webkit-align-items: ${1:stretch};\nalign-items: ${1:stretch};",
             "ai:fs": "-webkit-box-align: ${1:start};\n-moz-box-align: ${1:start};\n-ms-flex-align: ${1:start};\n-webkit-align-items: ${2:flex-start};\nalign-items: ${2:flex-start};",
@@ -152,12 +156,12 @@
             "ai:c": "-webkit-box-align: ${1:center};\n-moz-box-align: ${1:center};\n-ms-flex-align: ${1:center};\n-webkit-align-items: ${1:center};\nalign-items: ${1:center};",
             "ai:b": "-webkit-box-align: ${1:baseline};\n-moz-box-align: ${1:baseline};\n-ms-flex-align: ${1:baseline};\n-webkit-align-items: ${1:baseline};\nalign-items: ${1:baseline};",
 
-            "as": "-webkit-align-self: ${1:auto};\n-ms-flex-item-align: ${1:auto};\nalign-self: ${1:auto};",
-            "as:fs": "-webkit-align-self: ${1:flex-start};\n-ms-flex-item-align: ${2:start};\nalign-self: ${1:flex-start};",
-            "as:fe": "-webkit-align-self: ${1:flex-end};\n-ms-flex-item-align: ${2:end};\nalign-self: ${1:flex-end};",
-            "as:c": "-webkit-align-self: ${1:center};\n-ms-flex-item-align: ${1:center};\nalign-self: ${1:center};",
-            "as:b": "-webkit-align-self: ${1:baseline};\n-ms-flex-item-align: ${1:baseline};\nalign-self: ${1:baseline};",
-            "as:s": "-webkit-align-self: ${1:stretch};\n-ms-flex-item-align: ${1:stretch};\nalign-self: ${1:stretch};",
+            "as": "-ms-flex-item-align: ${1:auto};\n-webkit-align-self: ${1:auto};\nalign-self: ${1:auto};",
+            "as:fs": "-ms-flex-item-align: ${2:start};\n-webkit-align-self: ${1:flex-start};\nalign-self: ${1:flex-start};",
+            "as:fe": "-ms-flex-item-align: ${2:end};\n-webkit-align-self: ${1:flex-end};\nalign-self: ${1:flex-end};",
+            "as:c": "-ms-flex-item-align: ${1:center};\n-webkit-align-self: ${1:center};\nalign-self: ${1:center};",
+            "as:b": "-ms-flex-item-align: ${1:baseline};\n-webkit-align-self: ${1:baseline};\nalign-self: ${1:baseline};",
+            "as:s": "-ms-flex-item-align: ${1:stretch};\n-webkit-align-self: ${1:stretch};\nalign-self: ${1:stretch};",
 
             "od": "-webkit-box-ordinal-group: ${1:1};\n-moz-box-ordinal-group: ${1:1};\n-webkit-order: ${1:0};\n-ms-flex-order: ${1:0};\norder: ${1:0};"
         }
