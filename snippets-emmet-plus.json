@@ -147,8 +147,8 @@
             "ac:fs": "-ms-flex-line-pack: ${2:start};\n-webkit-align-content: flex-${1:start};\nalign-content: flex-${1:start};",
             "ac:fe": "-ms-flex-line-pack: ${2:end};\n-webkit-align-content: flex-${1:end};\nalign-content: flex-${1:end};",
             "ac:c": "-ms-flex-line-pack: ${1:center};\n-webkit-align-content: ${1:center};\nalign-content: ${1:center};",
-            "ac:sb": "-ms-flex-line-pack: ${2:justify};-webkit-align-content: ${1:space-between};\n\nalign-content: ${1:space-between};",
-            "ac:sa": "-ms-flex-line-pack: ${2:distribute};-webkit-align-content: ${1:space-around};\n\nalign-content: ${1:space-around};",
+            "ac:sb": "-ms-flex-line-pack: ${2:justify};\n-webkit-align-content: ${1:space-between};\nalign-content: ${1:space-between};",
+            "ac:sa": "-ms-flex-line-pack: ${2:distribute};\n-webkit-align-content: ${1:space-around};\nalign-content: ${1:space-around};",
 
             "ai": "-webkit-box-align: ${1:stretch};\n-moz-box-align: ${1:stretch};\n-ms-flex-align: ${1:stretch};\n-webkit-align-items: ${1:stretch};\nalign-items: ${1:stretch};",
             "ai:fs": "-webkit-box-align: ${1:start};\n-moz-box-align: ${1:start};\n-ms-flex-align: ${1:start};\n-webkit-align-items: ${2:flex-start};\nalign-items: ${2:flex-start};",
