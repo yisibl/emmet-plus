@@ -8,7 +8,7 @@
 
 1. 首先你得有个 Emmet。
 2. 打开 Sublime Text 的安装目录。
-3. 在 Data 文件夹下面新建一个名为 emmet 的目录。
+3. 便携版在 Data 文件夹下面新建一个名为 emmet 的目录。安装版请在[这篇文档](http://sublime-text.readthedocs.org/en/latest/basic_concepts.html#data)找到 Data 目录。
 4. 拷贝`snippets-emmet-plus.json`到该目录下。
 5. 打开 emmet 的配置文件`Emmet.sublime-settings`。
 6. 修改`extensions_path` 后面的路径为之前新建的 emmet 目录的绝对路径，例如`D:/Program Files/Sublime Text 2.0.2/Data/emmet`。
