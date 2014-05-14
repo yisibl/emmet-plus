@@ -4,16 +4,26 @@
 
 ## 如何使用？
 
-以 Sublime Text 为例
+以 Sublime Text 2 为例
 
-1. 首先你得有个 Emmet。
-2. 打开 Sublime Text 的安装目录。
-3. 在 Data 文件夹下面新建一个名为 emmet 的目录。
-4. 拷贝`snippets-emmet-plus.json`到该目录下。
-5. 打开 emmet 的配置文件`Emmet.sublime-settings`。
-6. 修改`extensions_path` 后面的路径为之前新建的 emmet 目录的绝对路径，例如`D:/Program Files/Sublime Text 2.0.2/Data/emmet`。
+1. 首先请确保已经安装了 Emmet， 并可以正常使用。
 
-尽情享受吧！
+1. 打开菜单 ```Preferences```→```Package Settings```→```Emmet```→```Settings-User```
+2. 复制```Emmet.sublime-settings```文件中的所有内容，粘贴到上面打开的```Settings-User```中
+3. 保存后重启 Sublime Text
+4. 打开一个 CSS 文件，输入```cm```，如果成功生成了如下注释，安装成功
+   ```css
+    /**
+     * 
+     * @file:     
+     * @author:   
+     * @update:   
+     * @note:     
+     * @doc:      
+     */
+   ```
+5. 尽情享受吧！
+6. Sublime Text 3 如果无法使用，欢迎反馈
 
 ## 扩展了哪些功能？
 
@@ -122,7 +132,16 @@ display: -ms-flexbox; /* IE 10 */
 display: flex; /* Chrome 29+, Firefox 22+, IE 11+, Opera 12.1/17/18, Android 4.4+ */
 ```
 
-所有输出代码都已经预定义光标路径，按`TAB`可以自动切换到下一个编辑点。
+* 增加了更多的 CSS 单位:
+  > c:ch, d:deg, g:grad, r:rad, t:turn
+
+* 增加更多的 CSS 简写:
+  > n:none, ih:inherit, ii:initial, db:double, u:unset
+
+* 增加了更多的没有单位的 CSS 属性:
+  > animation-iteration-count, counter-increment, font-size-adjust, flex-grow, flex-shrink, order, column-count, orphans, widows, shape-image-threshold, mask-box-outset
+
+所有输出代码都已经预定义光标路径，按 ```TAB``` 键可以自动切换到下一个编辑点。
 
 赶快试试吧(*^__^*) ！
 
