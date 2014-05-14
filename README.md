@@ -11,6 +11,7 @@
 3. 复制```Emmet.sublime-settings```文件中的所有内容，粘贴到上面打开的```Settings-User```中
 4. 保存后重启 Sublime Text
 5. 打开一个 CSS 文件，输入```cm```，如果成功生成了如下注释，安装成功
+
    ```css
     /**
      * 
