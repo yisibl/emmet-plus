@@ -11,7 +11,6 @@
 3. 复制```Emmet.sublime-settings```文件中的所有内容，粘贴到上面打开的```Settings-User```中
 4. 保存后重启 Sublime Text
 5. 打开一个 CSS 文件，输入```cm```，如果成功生成了如下注释，安装成功
-
    ```css
     /**
      * 
@@ -22,13 +21,13 @@
      * @doc:      
      */
    ```
-
 6. 尽情享受吧！
-7. Sublime Text 3 如果无法使用，欢迎反馈
+
+> Sublime Text 3 如果无法使用，欢迎反馈
 
 ## 扩展了哪些功能？
 
-    * 统一的注释风格，以[css-creating](https://github.com/yisibl/css-creating)为参考。
+* 统一的注释风格，以[css-creating](https://github.com/yisibl/css-creating)为参考。
 
     例如输入`c`，`cm`
 
